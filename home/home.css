@@ -94,6 +94,19 @@ body{
     }
 }
 
+.footer-container{
+    width: 100%;
+    background-color: rgba(80, 99, 8, 1);
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    & img{
+        width: 40px;
+        height: 40px;
+    }
+}
+
 @media (max-width: 767px) {
     .nav-wrapper{
         position: absolute;
