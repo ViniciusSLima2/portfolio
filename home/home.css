@@ -95,7 +95,6 @@ body{
 }
 
 @media (max-width: 767px) {
-
     .nav-wrapper{
         position: absolute;
         top: 0;
@@ -149,8 +148,6 @@ body{
                 top: 8px;
                 left: 0;
             }
-
-            
         }
     }
 
@@ -173,4 +170,13 @@ body{
             left: 0px;
         }
     }
+}
+
+@media (max-width: 1000px){
+    .banner-section{
+        & .img-container{
+            display: none;
+        }
+    }
+    
 }
