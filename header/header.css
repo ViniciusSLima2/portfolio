@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 40px;
+
+    & .links-container{
+        display: flex;
+        gap: 20px;
+
+        a{
+            text-decoration: none;
+            font-size: 17px;
+            color: #000;
+            font-weight: 600;
+            font-family: Muli;
+            transition: color 0.3s ease;
+        }
+
+        a:hover{
+            color: #484848;
+        }
+    }
+}
