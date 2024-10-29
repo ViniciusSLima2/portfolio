@@ -1,15 +1,18 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+class Header extends HTMLElement {
+    constructor() {
+        super(); // Chama o construtor da classe HTMLElement
 
-.header-container {
+        // Cria um shadow root
+        const shadow = this.attachShadow({ mode: 'open' });
+
+        const style = document.createElement('style')
+        style.textContent = `
+        .header-container {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
+
     padding: 40px;
 
     & .links-container {
@@ -52,7 +55,7 @@
         z-index: 999;
         display: flex;
         background-color: #FFF;
-        padding: 30px;
+        padding: 30px 0;
         transition: left 0.4s ease;
     }
 
@@ -115,7 +118,7 @@
             }
 
             background-color: transparent;
-            right: 10px;
+            right: 40px;
             top: 10px;
         }
 
@@ -123,4 +126,36 @@
             left: 0px;
         }
     }
+}`
+        // Estrutura do HTML
+        const header = document.createElement('header');
+        header.setAttribute('class', 'header-container');
+
+        header.innerHTML = `
+            <div class="nav-wrapper">
+                <nav class="links-container">
+                    <a href="home" id="home">Home</a>
+                    <a href="formacao" id="formacao">Formação</a>
+                    <a href="atuacao" id="atuacao">Atuação Profissional</a>
+                    <a href="contato" id="contato">Contato</a>
+                    <a href="portfolio" id="portfolio">Portfolio</a>
+                </nav>
+        
+                <div class="menu-hamburguer"></div>
+            </div>
+        `;
+
+        // Anexando o estilo e o HTML ao shadow DOM
+        shadow.appendChild(style);
+        shadow.appendChild(header);
+
+        const menuHamburguerRef = header.querySelector(".menu-hamburguer");
+
+        menuHamburguerRef.addEventListener("click", () => {
+            header.classList.toggle("active");
+        })
+    }
 }
+
+// Registrando o Web Component
+customElements.define('header-component', Header);

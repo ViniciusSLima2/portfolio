@@ -89,6 +89,7 @@ body {
         .contact-cta {
             border: none;
             margin-top: 20px;
+
             a {
                 text-decoration: none;
                 padding: 10px 15px;
@@ -98,8 +99,8 @@ body {
                 font-size: 18px;
                 transition: color 0.3s ease, background-color 0.3s ease;
             }
-            
-            a:hover{
+
+            a:hover {
                 color: #FFF;
                 background-color: #506308;
             }
@@ -121,31 +122,67 @@ body {
     }
 }
 
-.techs-section{
+.techs-section {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 30px;
-    padding: 40px 40px; 
-    & img{
+    padding: 40px 40px;
+
+    & img {
         width: 50px;
         height: 50px;
     }
 }
 
-.footer-container {
-    width: 100%;
-    background-color: rgba(80, 99, 8, 1);
-    padding: 40px;
+.about-me-section {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    align-items: center;
+    margin-bottom: 40px;
+    & .card-container {
+        display: flex;
+        gap: 10px;
+        max-width: 1400px;
 
-    & img {
-        width: 40px;
-        height: 40px;
+        background: #ffffff;
+        box-shadow:  20px 20px 60px #d9d9d9,
+                     -20px -20px 60px #ffffff;
+        p {
+            font-family: Muli;
+        }
+
+        .personal-img{
+            object-fit: cover;
+        }
+
+        .text-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding: 20px;
+            .title-container {
+                .title {
+                    font-size: 50px;
+                    font-weight: 700;
+                    color: #506308;
+                }
+
+                .role {
+                    font-size: 20px;
+                    color: rgba(0, 0, 0, 0.6)
+                }
+            }
+
+            .description {
+                font-size: 22px;
+                line-height: 150%;
+            }
+        }
     }
 }
+
+
 
 @media (max-width: 767px) {
     .nav-wrapper {
