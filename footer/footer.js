@@ -9,7 +9,7 @@ class Footer extends HTMLElement {
         style.textContent = `.footer-container {
             width: 100%;
             background-color: rgba(80, 99, 8, 1);
-            padding: 40px;
+            padding: 40px 0 ;
             display: flex;
             justify-content: center;
             gap: 20px;
