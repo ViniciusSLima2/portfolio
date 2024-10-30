@@ -72,7 +72,7 @@ class Header extends HTMLElement {
 
         & .menu-hamburguer {
             position: absolute;
-            right: -80px;
+            right: -47px;
             top: 0px;
             display: block;
             width: 25px;
@@ -134,11 +134,11 @@ class Header extends HTMLElement {
         header.innerHTML = `
             <div class="nav-wrapper">
                 <nav class="links-container">
-                    <a href="home" id="home">Home</a>
-                    <a href="formacao" id="formacao">Formação</a>
-                    <a href="atuacao" id="atuacao">Atuação Profissional</a>
-                    <a href="contato" id="contato">Contato</a>
-                    <a href="portfolio" id="portfolio">Portfolio</a>
+                    <a href="/home/home.html" id="home">Home</a>
+                    <a href="/formacao/formacao.html" id="formacao">Formação</a>
+                    <a href="/atuacao/atuacao.html" id="atuacao">Atuação Profissional</a>
+                    <a href="/contato/contato.html" id="contato">Contato</a>
+                    <a href="/portfolio/portfolio.html" id="portfolio">Portfolio</a>
                 </nav>
         
                 <div class="menu-hamburguer"></div>
@@ -154,6 +154,8 @@ class Header extends HTMLElement {
         menuHamburguerRef.addEventListener("click", () => {
             header.classList.toggle("active");
         })
+
+        console.log(window.location.href.replace("http://127.0.0.1:5500"))
     }
 }
 
