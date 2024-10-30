@@ -20,6 +20,7 @@ body{
     flex-grow: 1;
     & h1{
         font-size: 50px;
+        color: #506308;
         font-family: Muli;
     }
 

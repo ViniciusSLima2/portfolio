@@ -136,7 +136,7 @@ class Header extends HTMLElement {
                 <nav class="links-container">
                     <a href="/home/home.html" id="home">Home</a>
                     <a href="/formacao/formacao.html" id="formacao">Formação</a>
-                    <a href="/atuacao/atuacao.html" id="atuacao">Atuação Profissional</a>
+                    <a href="/experiencia-profissional/experiencia-profissional.html" id="atuacao">Atuação Profissional</a>
                     <a href="/contato/contato.html" id="contato">Contato</a>
                     <a href="/portfolio/portfolio.html" id="portfolio">Portfolio</a>
                 </nav>

@@ -1,0 +1,119 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Muli;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.exp-container{
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    gap: 40px;
+    flex-grow: 1;
+    & .title-container{
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        width: fit-content;
+        h1{
+            color: rgba(80, 99, 8, 1);
+            font-size: 50px;
+        }
+        .underline-bar{
+            width: 40%;
+            height: 4px;
+            background-color: rgba(80, 99, 8, 0.3);
+        }
+    }
+
+    & .content-container{
+        .exp-list{
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            position: relative;
+            padding-left: 40px;
+
+            &::before{
+                content: "";
+                display: inline-block;
+                position: absolute;
+                left: 15px;
+                
+                width: 3px;
+                height: 100%;
+                background-color: #ededed;
+            }
+
+            .item{
+                display: flex;
+                justify-content: space-between;
+                position: relative;
+                gap: 30px;
+                &::before{
+                    content: "";
+                    position: absolute;
+                    left: -32px;
+                    top: 0px;
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    background-color: rgba(80, 99, 8, 1);
+                    border: 4px solid #d8d8d8;
+                }
+                .metadata-container{
+                    width: 30%;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 6px;
+                    .year{
+                        font-weight: 600;
+                        font-size: 20px;
+                    }
+
+                    .company-name{
+                        font-size: 24px;
+                        font-weight: 600;
+                    }
+                    .role{
+                        color: rgba(0, 0, 0, 0.6)
+                    }
+                }
+
+                .description{
+                    max-width: 1000px;
+                    font-size: 20px;
+                    font-weight: 500;
+                }
+            }
+
+        }
+
+
+    }
+}
+
+@media (max-width: 767px){
+    .exp-container{
+        padding: 20px;
+
+        & .title-container{
+            h1{
+                font-size: 40px;
+            }
+        }
+        & .content-container{
+            .item{
+                flex-direction: column;
+            }
+        }
+    }
+}
