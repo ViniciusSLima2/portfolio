@@ -1,5 +1,82 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Muli;
+}
+
+.portfolio-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 0 40px;
+
+    h1 {
+        font-size: 50px;
+        color: #506308;
+    }
+
+    .content-container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        padding-bottom: 50px;
+        h2 {
+            font-size: 30px;
+            color: rgba(80, 99, 8, 0.5);
+            margin-bottom: 30px;
+        }
+
+        .project-card {
+            border-radius: 15px;
+            background: #ffffff;
+            box-shadow:  20px 20px 60px #d9d9d9,
+                         -20px -20px 60px #ffffff;
+            width: fit-content;
+            display: flex;
+            justify-content: space-between;
+            padding: 30px;
+            gap: 20px;
+            max-width: 1000px;
+            .image-links-container {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+
+                .project-img {
+                    width: 400px;
+                    height: 300px;
+                    object-fit: cover;
+                }
+
+                .links-container {
+                    a {
+                        img {
+                            width: 40px;
+                            height: 40px;
+                        }
+                    }
+                }
+            }
+
+            .text-container{
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+
+                .project-title{
+                    font-size: 30px;
+                    font-weight: 500;
+                    color: #506308;
+                }
+                .project-description{
+                    font-size: 22px;
+                    color: #5f5f5f;
+                }
+            }
+
+
+        }
+    }
 }
