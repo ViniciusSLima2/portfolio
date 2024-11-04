@@ -24,9 +24,8 @@ class Footer extends HTMLElement {
         footer.setAttribute('class', 'footer-container');
 
         footer.innerHTML = `
-            <a href="" id="instagram-logo"><img src="../src/img/instagram-logo.svg" alt="Logo do Instagram"></a>
-            <a href="" id="linkedin-logo"><img src="../src/img/linkedin-logo.svg" alt="Logo do LinkedIn"></a>
-            <a href="" id="github-logo"><img src="../src/img/github-logo.svg" alt="Logo do Github"></a>
+            <a href="https://www.linkedin.com/in/vinicius-lima01/" id="linkedin-logo" target="_blank"><img src="../src/img/linkedin-logo.svg" alt="Logo do LinkedIn"></a>
+            <a href="https://github.com/ViniciusSLima2" id="github-logo" target="_blank"><img src="../src/img/github-logo.svg" alt="Logo do Github" ></a>
         `;
 
         // Anexando o estilo e o HTML ao shadow DOM
