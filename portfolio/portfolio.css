@@ -51,11 +51,19 @@
                 }
 
                 .links-container {
+                    display: flex;
+                    justify-content: center;
+                    gap: 20px;
                     a {
                         img {
                             width: 40px;
                             height: 40px;
                         }
+                        transition: transform 0.3s ease;
+                    }
+
+                    a:hover{
+                        transform: scale(1.2);
                     }
                 }
             }
@@ -74,9 +82,121 @@
                     font-size: 22px;
                     color: #5f5f5f;
                 }
+
+                .tecnologies-container{
+                    display: flex;
+                    gap: 20px;
+                    flex-grow: 1;
+                    flex-wrap: wrap;
+                    img{
+                        width: 50px;
+                        height: 50px;
+                        object-fit: cover;
+                        cursor: pointer;
+                        transition: transform 0.3s ease;
+                    }
+                    img:hover{
+                        transform: scale(1.2);
+                    }
+                }
+
+
             }
 
 
+        }
+
+        .modal-container{
+            display: none;
+            .overlay{
+                background: #000;
+                height: 100vh;
+                left: 0;
+                opacity: 0.5;
+                position: fixed;
+                top: 0;
+                width: 100vw;
+                z-index: 10;
+            }
+            .info-container{
+                background: #fff;
+                border-radius: 8px;
+                box-shadow: 0 2px 8px #333;
+                min-width: 320px;
+                position: fixed;
+                left: 50%;
+                padding: 24px;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                z-index: 999;
+                max-height: 90%;
+                overflow-y: auto;
+                padding-bottom: 10px;
+                
+                .header-container{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    .tec-info{
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+                    }
+                    .close{
+                        font-size: 30px;
+                        font-weight: 700;
+                        cursor: pointer;
+                    }
+                    img{
+                        width: 50px;
+                        height: 50px;
+                        object-fit: cover;
+                    }
+
+                    .tec-name{
+                        font-weight: 600;
+                        font-size: 24px;
+                    }
+
+                    .tec-description{
+                        font-size: 18px;
+                        line-height: 60%;
+                    }
+                }
+
+                .tec-description{
+                    padding: 15px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:  1000px){
+    .portfolio-container{
+        .content-container{
+            .project-card{
+                flex-direction: column;
+
+                .image-links-container{
+                    align-items: center;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 767px){
+    .portfolio-container{
+        padding:  20px;
+        .content-container{
+            .project-card{
+                .image-links-container{
+                    .project-img{
+                        width: 100%;
+                    }
+                }
+            }
         }
     }
 }

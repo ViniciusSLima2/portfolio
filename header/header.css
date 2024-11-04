@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -29,12 +29,12 @@
         a:hover {
             color: #484848;
         }
+    }
 
-        #home {
-            background-color: rgba(80, 99, 8, 0.2);
-            padding: 8px 25px;
-            border-radius: 5px;
-        }
+    & .links-container.active {
+        background-color: rgba(80, 99, 8, 0.2);
+        padding: 8px 25px;
+        border-radius: 5px;
     }
 
     & .menu-hamburguer {

@@ -33,12 +33,13 @@ class Header extends HTMLElement {
             color: #484848;
         }
 
-        #home {
+        a.active{
             background-color: rgba(80, 99, 8, 0.2);
             padding: 8px 25px;
             border-radius: 5px;
         }
     }
+
 
     & .menu-hamburguer {
         display: none;
@@ -154,8 +155,13 @@ class Header extends HTMLElement {
         menuHamburguerRef.addEventListener("click", () => {
             header.classList.toggle("active");
         })
-
-        console.log(window.location.href.replace("http://127.0.0.1:5500"))
+        const url = window.location.href
+        
+        console.log(header.querySelectorAll(".links-container a"))
+        header.querySelectorAll(".links-container a").forEach((link) => {
+            console.log(link.href)
+            if(link.href === url) link.classList.add("active")
+        })
     }
 }
 
