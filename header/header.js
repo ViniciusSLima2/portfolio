@@ -157,9 +157,7 @@ class Header extends HTMLElement {
         })
         const url = window.location.href
         
-        console.log(header.querySelectorAll(".links-container a"))
         header.querySelectorAll(".links-container a").forEach((link) => {
-            console.log(link.href)
             if(link.href === url) link.classList.add("active")
         })
     }

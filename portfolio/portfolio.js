@@ -2,7 +2,6 @@ const modalContainerRef = document.querySelector("body > main > section > div.mo
 
 let isModalOpen = false;
 function changeModalState(tecName){
-    console.log("cl")
     if(isModalOpen){
         isModalOpen = false;
         modalContainerRef.style.display = "none";
