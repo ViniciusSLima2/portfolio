@@ -140,6 +140,7 @@ class Header extends HTMLElement {
                     <a href="/experiencia-profissional/experiencia-profissional.html" id="atuacao">Atuação Profissional</a>
                     <a href="/contato/contato.html" id="contato">Contato</a>
                     <a href="/portfolio/portfolio.html" id="portfolio">Portfolio</a>
+                    <a href="/lista-contatos/lista-contatos.html" id="lista-contatos">Lista Contatos</a>
                 </nav>
         
                 <div class="menu-hamburguer"></div>
