@@ -21,11 +21,11 @@ contacts.forEach((contact)=> {
         removeRowById(contact.id);
     });
     deleteCell.appendChild(deleteButton);
+
 })
 
 function removeRowById(idToRemove){
     const newMessagesArray = contacts.filter(item => item.id !== idToRemove)
-    console.log(newMessagesArray)
     let newContactsObject = contactsObject
     newContactsObject["data"] = newMessagesArray
     localStorage.setItem("contacts", JSON.stringify(newContactsObject))

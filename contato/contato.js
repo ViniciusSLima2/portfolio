@@ -3,7 +3,6 @@ function handleSubmit(event) {
     const contacts = JSON.parse(localStorage.getItem("contacts"))
     
     if (contacts === null) {
-        console.log("1")
         localStorage.setItem("contacts", JSON.stringify({
             "data": [{
                 "id" : 1,
@@ -14,7 +13,6 @@ function handleSubmit(event) {
             "lastIndex" : 1
         }));
     } else {
-        console.log("2")
         const lastIndex = contacts["lastIndex"]
         localStorage.setItem("contacts", JSON.stringify({
             "data": [...contacts["data"], {
@@ -26,5 +24,8 @@ function handleSubmit(event) {
             "lastIndex" : lastIndex + 1
         }));
     }
-
+    alert("Mensagem enviada com sucesso!")
+    document.forms["contact"]["name"].value = "";
+    document.forms["contact"]["email"].value = "";
+    document.forms["contact"]["description"].value = "";
 }
