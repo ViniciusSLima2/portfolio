@@ -5,12 +5,18 @@
     font-family: Muli;
 }
 
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
 .portfolio-container {
     display: flex;
     flex-direction: column;
     gap: 40px;
     padding: 0 40px;
-
+    flex-grow: 1;
     h1 {
         font-size: 50px;
         color: #506308;
